@@ -1,0 +1,17 @@
+{
+  "name": "jsonresume-theme-stackoverflowmar",
+  "version": "1.0.0",
+  "description": "Stack Overflow theme for JSON Resume for Marmits",
+  "author": "marmits",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marmits/jsonresume-theme-stackoverflowmar"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "markdown-it": "^13.0.1",
+    "moment": "^2.29.2"
+  }
+}
