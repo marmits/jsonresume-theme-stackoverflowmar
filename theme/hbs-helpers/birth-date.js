@@ -2,7 +2,9 @@ const moment = require('moment');
 const { SafeString } = require('handlebars');
 
 const birthDate = (birth) => {
+
   const out = [];
+
   if (birth && Object.keys(birth).length) {
     if (birth.place) {
       out.push(`<div> Born in ${birth.place}`);

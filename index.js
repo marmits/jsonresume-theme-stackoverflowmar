@@ -23,8 +23,11 @@ Handlebars.registerHelper('spaceToDash', spaceToDash);
 function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
   const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
+  const js1 = readFileSync(`${__dirname}/theme/hbs-helpers/ryan.js`, 'utf-8');
+  const js2 = readFileSync(`${__dirname}/theme/hbs-helpers/age.js`, 'utf-8');
   const partialsDir = join(__dirname, 'theme/partials');
   const filenames = readdirSync(partialsDir);
+
 
   filenames.forEach((filename) => {
     const matches = /^([^.]+).hbs$/.exec(filename);
@@ -38,6 +41,8 @@ function render(resume) {
   return Handlebars.compile(tpl)({
     css,
     resume,
+    js1,
+    js2
   });
 }
 
