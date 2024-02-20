@@ -352,7 +352,7 @@ section .location {
 .institution::before,
 .organization::before,
 .awarder::before {
-  content: "at ";
+  content: "à ";
 }
 
 .company,
@@ -678,7 +678,7 @@ section .location {
   .institution::before,
   .organization::before,
   .awarder::before {
-    content: "at ";
+    content: "à ";
   }
   .main-summary {
     padding: 0;
