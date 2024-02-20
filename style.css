@@ -232,6 +232,11 @@ section .location {
   justify-content: flex-start;
 }
 
+.page-break {
+  margin-top: 15px;
+  page-break-before: always;
+}
+
 #header > div {
   line-height: 1.5;
 }
@@ -583,6 +588,10 @@ section .location {
   opacity: 1 !important;
 }
 
+#pdf{
+  display: block;
+}
+
 /****************
 *		TABLET
 ****************/
@@ -640,9 +649,17 @@ section .location {
   }
 }
 
+
 @media print {
+
+
+  #pdf{
+    display: none !important;
+  }
+
+
   #profiles a:not(.hide-href-print)::after{
-    content: " (" attr(href) ") ";
+    content: "";
   }
   #resume {
     margin: 0.1em;
@@ -655,7 +672,7 @@ section .location {
     margin: 1cm 1.4cm;
   }
   .item-count {
-    display: none;
+    /*display: none;*/
   }
   .company::before,
   .institution::before,
@@ -700,7 +717,7 @@ section .location {
   ul.courses li {
     margin: 0;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background: transparent;
   }
   ul.keywords li::after,
@@ -721,7 +738,7 @@ section .location {
     margin: 0.5em 0 0 0;
   }
   ul.keywords::before {
-    content: "Skills acquired: ";
+    content: " ";
   }
   #skills .keywords::before {
     content: none;
