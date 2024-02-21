@@ -588,7 +588,7 @@ section .location {
   opacity: 1 !important;
 }
 
-#pdf{
+#version {
   display: block;
 }
 
@@ -653,9 +653,6 @@ section .location {
 @media print {
 
 
-  #pdf{
-    display: none !important;
-  }
 
 
   #profiles a:not(.hide-href-print)::after{
@@ -771,4 +768,9 @@ section .location {
   .fa-map-marker-alt:before {
     padding-left: 0.1em;
   }
+
+  #version span.url{
+    display: none !important;
+  }
+
 }
