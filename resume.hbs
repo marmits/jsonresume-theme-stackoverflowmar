@@ -3,13 +3,62 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+  <title>{{#resume.basics}}{{name}} - Développeur d'applications web {{/resume.basics}}</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-  <link rel="icon" type="image/png" href="https://docs.github.com/assets/cb-345/images/site/favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{#resume.basics}}{{#location}}{{city}}{{/location}}{{/resume.basics}}",
+        "streetAddress": "{{#resume.basics}}{{#location}}{{address}}{{/location}}{{/resume.basics}}",
+        "postalCode": "{{#resume.basics}}{{#location}}{{postalCode}}{{/location}}{{/resume.basics}}",
+        "addressRegion": "{{#resume.basics}}{{#location}}{{region}}{{/location}}{{/resume.basics}}",
+        "addressCountry": "{{#resume.basics}}{{#location}}{{countryCode}}{{/location}}{{/resume.basics}}"
+      },
+      "email": "{{#resume.basics}}{{email}}{{/resume.basics}}",
+      "telephone":"{{#resume.basics}}{{phone}}{{/resume.basics}}",
+      "jobTitle": "{{#resume.basics}}{{label}}{{/resume.basics}}",
+      "givenName": "{{#resume.basics}}{{namepersonSplit name "givenName"}}{{/resume.basics}}",
+      "familyName": "{{#resume.basics}}{{namepersonSplit name "familyName"}}{{/resume.basics}}",
+      "url": "{{#resume.basics}}{{url}}{{/resume.basics}}",
+      "birthDate" : "{{#resume.basics}}{{#birth}}{{date}}{{/birth}}{{/resume.basics}}",
+      "birthPlace" :{
+         "@type": "Place",
+         "address" : {
+          "addressLocality":  "{{#resume.basics}}{{#birth}}{{place}}{{/birth}}{{/resume.basics}}",
+          "addressCountry": "{{#resume.basics}}{{#birth}}{{state}}{{/birth}}{{/resume.basics}}"
+         }
+        },
+       "workLocation" : {
+        "@type": "Place",
+         "address" : {
+          "addressLocality":  "Reims",
+          "postalCode": "51100",
+          "addressRegion": "Grand Est",
+          "addressCountry" : "{{#resume.basics}}{{#location}}{{countryCode}}{{/location}}{{/resume.basics}}"
+         }
+       },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "{{resume.work.0.name }}",
+        "url": "{{resume.work.0.url }}",
+        "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{resume.work.0.location }}"
+        }
+      }
+    }
+  </script>
+
   <style>
   {{{css}}}
   </style>
-  
+
+
   </head>
   <body>
   
@@ -28,27 +77,20 @@
     {{> references }}
 
 
-    <!--div id="ryan">
-      <p>test fetch:</p>
-    </div-->
 
   </div>
 
   <script>
 
-   {{{js1}}}
-   {{{js2}}}
-   new Ryan({'div':'ryan'});
 
-   new Age();
+   //new Ryan({'div':'ryan'});
+
+   //new Age();
 
 
   </script>
 
   </body>
-
-
-
 
 
 </html>
