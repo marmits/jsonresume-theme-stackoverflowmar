@@ -22,7 +22,8 @@
       "email": "{{#resume.basics}}{{email}}{{/resume.basics}}",
       "telephone":"{{#resume.basics}}{{phone}}{{/resume.basics}}",
       "jobTitle": "{{#resume.basics}}{{label}}{{/resume.basics}}",
-      "name": "{{#resume.basics}}{{name}}{{/resume.basics}}",
+      "givenName": "{{#resume.basics}}{{namepersonSplit name "givenName"}}{{/resume.basics}}",
+      "familyName": "{{#resume.basics}}{{namepersonSplit name "familyName"}}{{/resume.basics}}",
       "url": "{{#resume.basics}}{{url}}{{/resume.basics}}",
       "birthDate" : "{{#resume.basics}}{{#birth}}{{date}}{{/birth}}{{/resume.basics}}",
       "birthPlace" :{
