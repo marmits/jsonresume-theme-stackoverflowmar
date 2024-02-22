@@ -30,7 +30,7 @@ class Age {
       that.divBorn.appendChild(age);
       that.ageElement = this.divBorn.querySelector("span");
       try {
-        that.ageElement.innerHTML = that.getAge() + " ans.";
+        that.ageElement.innerHTML = ", " + that.getAge() + " ans.";
       }
       catch (e){
         that.ageElement.innerHTML = e;
@@ -45,7 +45,7 @@ class Age {
       that.ageElement = that.ageElementSection.querySelector("span");
       try {
         document.title = document.title + " depuis " + that.getAge() + " ans.";
-        that.ageElement.innerHTML = that.getAge() + " ans";
+        that.ageElement.innerHTML = "Dev depuis " + that.getAge() + " ans.";
 
       }
       catch (e){
