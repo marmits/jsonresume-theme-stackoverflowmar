@@ -7,7 +7,7 @@ const birthDate = (birth) => {
 
   if (birth && Object.keys(birth).length) {
     if (birth.place) {
-      out.push(`<div> Né à ${birth.place}`);
+      out.push(`<div id="born"> Né à ${birth.place}`);
     }
     if (birth.place && birth.state) {
       out.push(`, ${birth.state}`);
@@ -16,7 +16,7 @@ const birthDate = (birth) => {
     if (year && birth.place && birth.state) {
       out.push(` en ${year}</div>`);
     } else if (year && (!birth.place || birth.state)) {
-      out.push(`<div> Né en ${year}</div>`);
+      out.push(`<div> Né en ${year} </div>`);
     }
   }
 

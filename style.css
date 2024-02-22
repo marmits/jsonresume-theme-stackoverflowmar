@@ -647,6 +647,14 @@ section .location {
   .display:not(.none) {
     display: block;
   }
+
+  #born span{
+    display:inline;
+  }
+
+  #born span::before {
+    content: ", ";
+  }
 }
 
 
@@ -772,5 +780,10 @@ section .location {
   #version span.url{
     display: none !important;
   }
+
+  #born span{
+    display: none !important;
+  }
+
 
 }

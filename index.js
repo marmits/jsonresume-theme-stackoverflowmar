@@ -33,7 +33,7 @@ function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
   const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
   //const js1 = readFileSync(`${__dirname}/theme/hbs-helpers/ryan.js`, 'utf-8');
-  const js2 = readFileSync(`${__dirname}/theme/hbs-helpers/age.js`, 'utf-8');
+  const ageJs = readFileSync(`${__dirname}/theme/hbs-helpers/age.js`, 'utf-8');
   const partialsDir = join(__dirname, 'theme/partials');
   const filenames = readdirSync(partialsDir);
 
@@ -51,7 +51,7 @@ function render(resume) {
     css,
     resume,
     //js1,
-    js2
+    ageJs
   });
 }
 

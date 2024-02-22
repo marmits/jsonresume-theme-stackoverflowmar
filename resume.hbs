@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -61,7 +61,7 @@
 
   </head>
   <body>
-  
+
   <div id="resume">
     {{> basics }}
     {{> work }}
@@ -76,18 +76,12 @@
     {{> interests }}
     {{> references }}
 
-
-
   </div>
 
-  <script>
-
-
-   //new Ryan({'div':'ryan'});
-
-   //new Age();
-
-
+  <script type="text/javascript">
+    {{{ageJs}}}
+    let ageMe =new Age("{{#resume.basics}}{{#birth}}{{date}}{{/birth}}{{/resume.basics}}");
+    ageMe.setHtmlAge();
   </script>
 
   </body>
