@@ -1,8 +1,8 @@
 class Age {
-    constructor(dateFirst) {
-      this.dateNaissance = new Date(this.formatDate(dateFirst));
+    constructor(date) {
+      this.date = new Date(this.formatDate(date));
       this.divBorn = document.getElementById("born");
-      this.ageElement = null;
+      this.divResume = document.getElementById("resume");
     }
 
     //YYYY-MM-DD
@@ -17,23 +17,39 @@ class Age {
 
     getAge(){
       let that = this;
-      let dt = new Date(that.dateNaissance);
+      let dt = new Date(that.date);
       let ma_diff = Date.now() - dt.getTime();
       let age_dt = new Date(ma_diff);
       let an = age_dt.getUTCFullYear();
       return Math.abs(an - 1970);
     }
 
-    setHtmlAge = function(){
+    setHtmlAgeMe = function(){
       let that = this;
       let age = document.createElement("span");
       that.divBorn.appendChild(age);
-      that.ageElement = that.divBorn.querySelector("span");
+      that.ageElement = this.divBorn.querySelector("span");
       try {
         that.ageElement.innerHTML = that.getAge() + " ans.";
       }
       catch (e){
         that.ageElement.innerHTML = e;
+      }
+    }
+
+    setHtmlAgeDev = function(){
+      let that = this;
+      let age = document.createElement("span");
+      that.ageElementSection = that.divResume.querySelector("section.agedev");
+      that.ageElementSection.appendChild(age);
+      that.ageElement = that.ageElementSection.querySelector("span");
+      try {
+        document.title = document.title + " depuis " + that.getAge() + " ans.";
+        that.ageElement.innerHTML = that.getAge() + " ans";
+
+      }
+      catch (e){
+        throw e;
       }
     }
     

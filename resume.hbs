@@ -81,7 +81,9 @@
   <script type="text/javascript">
     {{{ageJs}}}
     let ageMe =new Age("{{#resume.basics}}{{#birth}}{{date}}{{/birth}}{{/resume.basics}}");
-    ageMe.setHtmlAge();
+    let AgeDev =new Age("{{resume.education.0.startDate }}");
+    ageMe.setHtmlAgeMe();
+    AgeDev.setHtmlAgeDev();
   </script>
 
   </body>
