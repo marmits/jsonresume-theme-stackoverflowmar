@@ -592,6 +592,11 @@ section .location {
   display: block;
 }
 
+#born span{
+  display:inline;
+}
+
+
 /****************
 *		TABLET
 ****************/
@@ -648,20 +653,9 @@ section .location {
     display: block;
   }
 
-  #born span{
-    display:inline;
-  }
 
-  #born span::before {
-    content: ", ";
-  }
 
-  section.agedev span::before {
-    content: "Dev depuis ";
-  }
-  section.agedev span::after {
-    content: ".";
-  }
+  
 
 }
 
