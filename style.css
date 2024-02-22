@@ -598,6 +598,25 @@ section .location {
 
 
 /****************
+*		PHONE
+****************/
+
+@media screen and (max-width: 601px) {
+  body,
+  html {
+    font-size: 1.1rem;
+  }
+  a{
+    font-size: 0.9rem;
+  }
+
+  header a{
+    font-size: 1.1rem;
+  }
+
+}
+
+/****************
 *		TABLET
 ****************/
 
