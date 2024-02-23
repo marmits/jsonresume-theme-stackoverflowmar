@@ -327,6 +327,9 @@ section .location {
   opacity: 0;
 }
 
+
+
+
 .position,
 .company,
 .organization,
@@ -727,6 +730,12 @@ section .location {
   .section > section > section:last-of-type {
     margin: 0;
   }
+
+  #education section.education-item {
+    margin-bottom: 0rem;
+  }
+
+
   .stack-overflow::after {
     content: "";
   }
