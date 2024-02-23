@@ -682,7 +682,7 @@ section .location {
 @media print {
   body,
   html {
-    font-size: 0.99em;
+    font-size: 1.02rem;
   }
 
   #profiles a:not(.hide-href-print)::after{
