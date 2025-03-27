@@ -1,9 +1,15 @@
+
+
 class Age {
-    constructor(date) {
+    constructor(date, author) {
+      this.author = author;
       this.date = new Date(this.formatDate(date));
       this.divBorn = document.getElementById("born");
       this.divResume = document.getElementById("resume");
     }
+
+
+
 
     //YYYY-MM-DD
     formatDate(dateToFormat){
@@ -40,12 +46,17 @@ class Age {
     setHtmlAgeDev = function(){
       let that = this;
       let age = document.createElement("span");
+      that.ElementHeader = document.getElementById("header");
+      let Name = that.ElementHeader.querySelector("h1").innerHTML;
+
       that.ageElementSection = that.divResume.querySelector("section.agedev");
       that.ageElementSection.appendChild(age);
       that.ageElement = that.ageElementSection.querySelector("span");
       try {
         document.title = document.title + " depuis " + that.getAge() + " ans.";
-        that.ageElement.innerHTML = "Dev depuis " + that.getAge() + " ans.";
+        if(that.author.toLowerCase() === Name.toLowerCase()){
+          that.ageElement.innerHTML = "Dev depuis " + that.getAge() + " ans.";
+        }
 
       }
       catch (e){

@@ -13,22 +13,7 @@
       {{/if}}
 
       <header class="clear">
-         <div class="date">
-          {{#if startDate}}
-          <span class="startDate">
-            {{MY startDate}}
-          </span>
-          {{/if}}
-          {{#if endDate}}
-          <span class="endDate">
-            - {{MY endDate}}
-          </span>
-          {{else}}
-          <span class="endDate">
-            - Current
-          </span>
-          {{/if}}
-        </div>
+        {{> date startDate=startDate endDate=endDate }}
         <div class="header-left">
           {{#if position}}
           <div class="position">
@@ -44,7 +29,7 @@
       {{/if}}
       {{#if website}}
       <div class="website">
-        <span class="fas fa-external-link-alt"></span>
+        <span class="fa-solid fa-up-right-from-square"></span>
         <a target="_blank" href="{{website}}">{{website}}</a>
       </div>
       {{/if}}

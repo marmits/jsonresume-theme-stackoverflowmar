@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <link rel="canonical" href="https://gs.marmits.com" />
   <title>{{#resume.basics}}{{name}} - Développeur d'applications web {{/resume.basics}}</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/png" href="https://marmits.github.io/favicon.png"/>
 
   <script type="application/ld+json">
@@ -81,8 +81,9 @@
 
   <script type="text/javascript">
     {{{ageJs}}}
+
     let ageMe =new Age("{{#resume.basics}}{{#birth}}{{date}}{{/birth}}{{/resume.basics}}");
-    let AgeDev =new Age("{{resume.education.0.startDate }}");
+    let AgeDev =new Age("{{resume.education.0.startDate }}","{{AUTHOR}}");
     ageMe.setHtmlAgeMe();
     AgeDev.setHtmlAgeDev();
   </script>

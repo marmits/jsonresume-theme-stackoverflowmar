@@ -551,19 +551,19 @@ section .location {
   width: 2.5em;
 }
 
-.level.intermediate .bar::after {
+.level.intermediate .bar::after, .level.intermediaire .bar::after {
   background: #ffdf1f;
   width: 5em;
 }
 
 .level.advanced .bar::after,
-.level.fluent .bar::after {
+.level.fluent .bar::after, .level.maitrise .bar::after {
   background: #5cb85c;
   width: 7.5em;
 }
 
 .level.master .bar::after,
-.level.native.speaker .bar::after {
+.level.native.speaker .bar::after, .level.langue.maternelle .bar::after {
   background: #59c596;
   width: 10em;
 }
@@ -809,7 +809,7 @@ section .location {
     display: block;
     opacity: 1 !important;
   }
-  .fa-map-marker-alt:before {
+  .fa-location-dot:before {
     padding-left: 0.1em;
   }
 
