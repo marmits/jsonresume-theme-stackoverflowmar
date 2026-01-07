@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-stackoverflowmar",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Stack Overflow theme for JSON Resume for Marmits => FR",
   "author": "marmits",
   "repository": {
@@ -9,6 +9,11 @@
   },
   "license": "MIT",
   "main": "index.js",
+  "files": ["index.js", "resume.hbs", "style.css", "theme/"],
+  "scripts": {
+    "build": "echo \"Pas de build\"",
+    "prepare": "pnpm run build"
+  },
   "dependencies": {
     "handlebars": "^4.7.7",
     "markdown-it": "^13.0.1",
