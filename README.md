@@ -29,3 +29,15 @@ npm run build
 ```
 
 Répète la commande `npm link` dans l’application après chaque `npm ci`, car cette dernière recrée `node_modules`. Les modifications du thème sont alors visibles directement lors de la génération.
+
+### Variante : dépendance locale dans `package.json`
+
+Si tu préfères déclarer le dossier du thème dans le manifeste de l’application, ajoute cette entrée dans `dependencies` :
+
+```json
+"jsonresume-theme-stackoverflowmar": "file:../jsonresume-theme-stackoverflowmar"
+```
+
+Le chemin est relatif au dossier de l’application : adapte-le si le thème et l’application ne sont pas voisins. Installe d’abord les dépendances du thème avec `npm install --no-package-lock`, puis lance `npm install` dans l’application pour mettre à jour son `package-lock.json`, et enfin `npm run build`.
+
+Cette dépendance `file:` convient au développement local. Pour GitHub Actions, garde une dépendance Git versionnée ou clone le thème dans le chemin attendu par le workflow ; le runner ne possède pas automatiquement le dossier local.

@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-stackoverflowmar",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Stack Overflow theme for JSON Resume for Marmits => FR",
   "author": "marmits",
   "repository": {
@@ -11,8 +11,8 @@
   "main": "index.js",
   "files": ["index.js", "resume.hbs", "style.css", "theme/"],
   "dependencies": {
-    "handlebars": "^4.7.7",
-    "markdown-it": "^14.1.0",
-    "moment": "^2.30.1"
+    "handlebars": "^4.7.10",
+    "markdown-it": "^15.0.2",
+    "moment": "^2.31.0"
   }
 }
