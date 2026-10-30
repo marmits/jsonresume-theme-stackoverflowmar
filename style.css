@@ -137,7 +137,8 @@ table {
 
 body,
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   font-size: 16px;
   color: #40484f;
   font-weight: 400;
@@ -686,7 +687,7 @@ section .location {
 @media print {
   body,
   html {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
   }
 
   #profiles a:not(.hide-href-print)::after{
