@@ -41,3 +41,7 @@ Si tu préfères déclarer le dossier du thème dans le manifeste de l’applica
 Le chemin est relatif au dossier de l’application : adapte-le si le thème et l’application ne sont pas voisins. Installe d’abord les dépendances du thème avec `npm install --no-package-lock`, puis lance `npm install` dans l’application pour mettre à jour son `package-lock.json`, et enfin `npm run build`.
 
 Cette dépendance `file:` convient au développement local. Pour GitHub Actions, garde une dépendance Git versionnée ou clone le thème dans le chemin attendu par le workflow ; le runner ne possède pas automatiquement le dossier local.
+
+## Pagination PDF
+
+Le thème évite de couper une expérience entre deux pages lorsque sa hauteur le permet. Pour commencer volontairement une expérience sur une nouvelle page, ajoute `"breakBefore": true` à l’objet correspondant dans `work`. Cette option est propre au thème et peut être ignorée par d’autres thèmes JSON Resume.

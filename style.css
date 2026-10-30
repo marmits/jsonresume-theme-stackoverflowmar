@@ -234,7 +234,7 @@ section .location {
 }
 
 .page-break {
-  margin-top: 15px;
+  break-before: page;
   page-break-before: always;
 }
 
@@ -734,6 +734,10 @@ section .location {
     margin: 0;
   }
 
+  .work-item {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
 
 
   #education section.education-item {

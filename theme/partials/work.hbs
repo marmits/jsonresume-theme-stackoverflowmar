@@ -7,10 +7,7 @@
   <section id="work">
     {{#each resume.work}}
 
-      {{#if breakBefore}}
-        <section class="item page-break"> </section>
-      {{else}}
-        <section class="work-item">
+        <section class="work-item{{#if breakBefore}} page-break{{/if}}">
           {{#if name}}
 
           {{#if summary}}
@@ -54,7 +51,6 @@
             {{/if}}
           </div>
         </section>
-      {{/if}}
 
     {{/each}}
   </section>
